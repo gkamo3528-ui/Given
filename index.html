@@ -4,10 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AdEarn - Watch Ads and Earn Money</title>
-    <meta name="description" content="Watch ads and earn money with our platform. View banner ads and interstitial ads to maximize your earnings with Google AdMob.">
-    
-    <!-- Google AdMob SDK -->
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3304308602726227"
+    <meta name="description" content="Watch ads and earn money with our platform. View banner ads to maximize your earnings with Google AdSense.">
+
+    <!-- Google AdSense Verification -->
+    <meta name="google-adsense-account" content="ca-pub-3378768889703388">
+
+    <!-- Google AdSense Script -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3378768889703388"
      crossorigin="anonymous"></script>
     
     <link rel="stylesheet" href="styles.css">
@@ -21,7 +24,8 @@
     <!-- Open Graph Meta Tags -->
     <meta property="og:title" content="AdEarn - Watch Ads and Earn Money">
     <meta property="og:description" content="Join thousands of users earning money by watching ads. Simple, fast, and rewarding.">
-    <meta property="og:type" content="website">
+    <meta property="og:type" content="website"> 
+    <h2>IM HIM</h2>
 </head>
 <body>
     <!-- Header -->
@@ -40,11 +44,10 @@
     <!-- Top Banner Ad -->
     <div class="ad-container banner-ad">
         <div class="ad-label">Advertisement</div>
-        <!-- Google AdMob Banner Ad -->
         <ins class="adsbygoogle"
              style="display:block"
-             data-ad-client="ca-pub-3304308602726227"
-             data-ad-slot="6405996717"
+             data-ad-client="ca-pub-3378768889703388"
+             data-ad-slot="1234567890"
              data-ad-format="auto"
              data-full-width-responsive="true"></ins>
     </div>
@@ -81,7 +84,7 @@
                         <h4>Video Advertisement</h4>
                         <p>Watch a 30-second video ad</p>
                         <div class="reward">+$0.05</div>
-                        <button class="btn btn-primary watch-ad-btn" data-type="interstitial">Watch Now</button>
+                        <button class="btn btn-primary watch-ad-btn">Watch Now</button>
                     </div>
                     
                     <div class="ad-card" data-reward="0.03">
@@ -89,7 +92,7 @@
                         <h4>Banner Advertisement</h4>
                         <p>View banner ad for 15 seconds</p>
                         <div class="reward">+$0.03</div>
-                        <button class="btn btn-primary watch-ad-btn" data-type="banner">Watch Now</button>
+                        <button class="btn btn-primary watch-ad-btn">Watch Now</button>
                     </div>
                     
                     <div class="ad-card" data-reward="0.08">
@@ -97,7 +100,7 @@
                         <h4>Interactive Ad</h4>
                         <p>Engage with interactive content</p>
                         <div class="reward">+$0.08</div>
-                        <button class="btn btn-primary watch-ad-btn" data-type="interstitial">Watch Now</button>
+                        <button class="btn btn-primary watch-ad-btn">Watch Now</button>
                     </div>
                     
                     <div class="ad-card" data-reward="0.10">
@@ -105,7 +108,7 @@
                         <h4>Premium Ad</h4>
                         <p>Watch premium content ad</p>
                         <div class="reward">+$0.10</div>
-                        <button class="btn btn-primary watch-ad-btn" data-type="interstitial">Watch Now</button>
+                        <button class="btn btn-primary watch-ad-btn">Watch Now</button>
                     </div>
                 </div>
             </section>
@@ -113,11 +116,10 @@
             <!-- Middle Banner Ad -->
             <div class="ad-container banner-ad">
                 <div class="ad-label">Advertisement</div>
-                <!-- Google AdMob Banner Ad -->
                 <ins class="adsbygoogle"
                      style="display:block"
-                     data-ad-client="ca-pub-3304308602726227"
-                     data-ad-slot="6405996717"
+                     data-ad-client="ca-pub-3378768889703388"
+                     data-ad-slot="2345678901"
                      data-ad-format="auto"
                      data-full-width-responsive="true"></ins>
             </div>
@@ -164,11 +166,10 @@
     <!-- Footer Banner Ad -->
     <div class="ad-container banner-ad footer-ad">
         <div class="ad-label">Advertisement</div>
-        <!-- Google AdMob Banner Ad -->
         <ins class="adsbygoogle"
              style="display:block"
-             data-ad-client="ca-pub-3304308602726227"
-             data-ad-slot="6405996717"
+             data-ad-client="ca-pub-3378768889703388"
+             data-ad-slot="3456789012"
              data-ad-format="auto"
              data-full-width-responsive="true"></ins>
     </div>
@@ -202,40 +203,11 @@
         </div>
     </footer>
 
-    <!-- Modal for Ad Viewing -->
-    <div class="modal" id="adModal">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h4>Watching Advertisement</h4>
-                <span class="close" id="closeModal">&times;</span>
-            </div>
-            <div class="modal-body">
-                <div class="ad-viewer">
-                    <div class="timer">Time remaining: <span id="adTimer">30</span>s</div>
-                    <div class="ad-content" id="adContent">
-                        <!-- Interstitial Ad will be loaded here -->
-                        <div class="interstitial-placeholder">
-                            <h3>Advertisement Loading...</h3>
-                            <div class="loading-spinner"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Notification Toast -->
-    <div class="toast" id="toast">
-        <span class="toast-message" id="toastMessage"></span>
-    </div>
-
     <script src="script.js"></script>
     
     <!-- Initialize AdSense -->
     <script>
         (adsbygoogle = window.adsbygoogle || []).push({});
-        (adsbygoogle = window.adsbygoogle || []).push({});
-        (adsbygoogle = window.adsbygoogle || []).push({});
     </script>
 </body>
-</html>
+    </html>
