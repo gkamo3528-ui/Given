@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AdEarn - Watch Ads and Earn Money</title>
+    <meta name="description" content="Watch ads and earn money with our platform. View banner ads and interstitial ads to maximize your earnings with Google AdMob.">
+    
+    <!-- Google AdMob SDK -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3304308602726227"
+     crossorigin="anonymous"></script>
+    
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- PWA Meta Tags -->
+    <meta name="theme-color" content="#4f46e5">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="AdEarn">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="AdEarn - Watch Ads and Earn Money">
+    <meta property="og:description" content="Join thousands of users earning money by watching ads. Simple, fast, and rewarding.">
+    <meta property="og:type" content="website">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="nav">
+                <h1 class="logo">💰 Khorommbi-AdEarn</h1>
+                <div class="user-info">
+                    <span class="earnings">$<span id="totalEarnings">0.00</span></span>
+                    <button class="btn btn-secondary" id="profileBtn">Profile</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Top Banner Ad -->
+    <div class="ad-container banner-ad">
+        <div class="ad-label">Advertisement</div>
+        <!-- Google AdMob Banner Ad -->
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-3304308602726227"
+             data-ad-slot="6405996717"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+    </div>
+
+    <!-- Main Content -->
+    <main class="main">
+        <div class="container">
+            <!-- Hero Section -->
+            <section class="hero">
+                <h2>Start Earning Money by Watching Ads</h2>
+                <p>Join thousands of users who are earning money daily by simply viewing advertisements</p>
+                <div class="stats">
+                    <div class="stat">
+                        <span class="stat-number" id="adsWatched">0</span>
+                        <span class="stat-label">Ads Watched</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number" id="todayEarnings">$0.00</span>
+                        <span class="stat-label">Today's Earnings</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number" id="totalUsers">12,547</span>
+                        <span class="stat-label">Active Users</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Ad Viewing Section -->
+            <section class="ad-section">
+                <h3>Available Ads</h3>
+                <div class="ad-grid">
+                    <div class="ad-card" data-reward="0.05">
+                        <div class="ad-icon">📺</div>
+                        <h4>Video Advertisement</h4>
+                        <p>Watch a 30-second video ad</p>
+                        <div class="reward">+$0.05</div>
+                        <button class="btn btn-primary watch-ad-btn" data-type="interstitial">Watch Now</button>
+                    </div>
+                    
+                    <div class="ad-card" data-reward="0.03">
+                        <div class="ad-icon">🖼️</div>
+                        <h4>Banner Advertisement</h4>
+                        <p>View banner ad for 15 seconds</p>
+                        <div class="reward">+$0.03</div>
+                        <button class="btn btn-primary watch-ad-btn" data-type="banner">Watch Now</button>
+                    </div>
+                    
+                    <div class="ad-card" data-reward="0.08">
+                        <div class="ad-icon">🎮</div>
+                        <h4>Interactive Ad</h4>
+                        <p>Engage with interactive content</p>
+                        <div class="reward">+$0.08</div>
+                        <button class="btn btn-primary watch-ad-btn" data-type="interstitial">Watch Now</button>
+                    </div>
+                    
+                    <div class="ad-card" data-reward="0.10">
+                        <div class="ad-icon">⭐</div>
+                        <h4>Premium Ad</h4>
+                        <p>Watch premium content ad</p>
+                        <div class="reward">+$0.10</div>
+                        <button class="btn btn-primary watch-ad-btn" data-type="interstitial">Watch Now</button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Middle Banner Ad -->
+            <div class="ad-container banner-ad">
+                <div class="ad-label">Advertisement</div>
+                <!-- Google AdMob Banner Ad -->
+                <ins class="adsbygoogle"
+                     style="display:block"
+                     data-ad-client="ca-pub-3304308602726227"
+                     data-ad-slot="6405996717"
+                     data-ad-format="auto"
+                     data-full-width-responsive="true"></ins>
+            </div>
+
+            <!-- Earnings Section -->
+            <section class="earnings-section">
+                <h3>Your Earnings</h3>
+                <div class="earnings-card">
+                    <div class="earnings-header">
+                        <h4>Total Balance</h4>
+                        <span class="balance">$<span id="totalBalance">0.00</span></span>
+                    </div>
+                    <div class="earnings-actions">
+                        <button class="btn btn-success" id="withdrawBtn">Withdraw</button>
+                        <button class="btn btn-outline" id="historyBtn">View History</button>
+                    </div>
+                </div>
+                
+                <div class="recent-earnings">
+                    <h4>Recent Activity</h4>
+                    <div class="activity-list" id="activityList">
+                        <!-- Activity items will be populated by JavaScript -->
+                    </div>
+                </div>
+            </section>
+
+            <!-- Referral Section -->
+            <section class="referral-section">
+                <h3>Earn More with Referrals</h3>
+                <div class="referral-card">
+                    <div class="referral-icon">👥</div>
+                    <h4>Invite Friends</h4>
+                    <p>Earn $0.50 for every friend you refer who watches their first ad</p>
+                    <div class="referral-code">
+                        <input type="text" id="referralCode" value="EARN2024ADX" readonly>
+                        <button class="btn btn-secondary" id="copyBtn">Copy</button>
+                    </div>
+                    <button class="btn btn-primary" id="shareBtn">Share Link</button>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer Banner Ad -->
+    <div class="ad-container banner-ad footer-ad">
+        <div class="ad-label">Advertisement</div>
+        <!-- Google AdMob Banner Ad -->
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-3304308602726227"
+             data-ad-slot="6405996717"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h5>AdEarn</h5>
+                    <p>Making earning money simple and rewarding through advertisements</p>
+                </div>
+                <div class="footer-section">
+                    <h5>Quick Links</h5>
+                    <ul>
+                        <li><a href="#how-it-works">How It Works</a></li>
+                        <li><a href="#earnings">Earnings</a></li>
+                        <li><a href="#support">Support</a></li>
+                        <li><a href="#privacy">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h5>Contact</h5>
+                    <p>support gkamo3528@gmail.com</p>
+                    <p>077 424 1526</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Kamogelo Khorommbi. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal for Ad Viewing -->
+    <div class="modal" id="adModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4>Watching Advertisement</h4>
+                <span class="close" id="closeModal">&times;</span>
+            </div>
+            <div class="modal-body">
+                <div class="ad-viewer">
+                    <div class="timer">Time remaining: <span id="adTimer">30</span>s</div>
+                    <div class="ad-content" id="adContent">
+                        <!-- Interstitial Ad will be loaded here -->
+                        <div class="interstitial-placeholder">
+                            <h3>Advertisement Loading...</h3>
+                            <div class="loading-spinner"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Notification Toast -->
+    <div class="toast" id="toast">
+        <span class="toast-message" id="toastMessage"></span>
+    </div>
+
+    <script src="script.js"></script>
+    
+    <!-- Initialize AdSense -->
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+        (adsbygoogle = window.adsbygoogle || []).push({});
+        (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+</body>
+</html>
